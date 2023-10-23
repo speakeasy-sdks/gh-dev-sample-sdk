@@ -1,0 +1,12 @@
+# PostBucketsBucketKeyMessages200ApplicationJSONDataWarning
+
+An object representing warnings (non-fatal warnings) for this item. Only present if status is warning, otherwise this will be null.
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `code`                                                                                                | *number*                                                                                              | :heavy_minus_sign:                                                                                    | A numeric error code for the specific problem we encountered with this message. (warning status only) |
+| `message`                                                                                             | *string*                                                                                              | :heavy_minus_sign:                                                                                    | A description of the problem we encountered with this message. (warning status only)                  |
+| `moreInfo`                                                                                            | *string*                                                                                              | :heavy_minus_sign:                                                                                    | A link to more help about the warning. (warning status only)                                          |
