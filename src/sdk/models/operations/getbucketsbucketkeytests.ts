@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
@@ -23,7 +23,7 @@ export class GetBucketsBucketKeyTestsRequest extends SpeakeasyBase {
 /**
  * List of tests for this bucket
  */
-export class GetBucketsBucketKeyTests200ApplicationJSON extends SpeakeasyBase {
+export class GetBucketsBucketKeyTestsResponseBody extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: shared.Test })
     @Expose({ name: "data" })
     @Type(() => shared.Test)
@@ -58,5 +58,5 @@ export class GetBucketsBucketKeyTestsResponse extends SpeakeasyBase {
      * List of tests for this bucket
      */
     @SpeakeasyMetadata()
-    getBucketsBucketKeyTests200ApplicationJSONObject?: GetBucketsBucketKeyTests200ApplicationJSON;
+    object?: GetBucketsBucketKeyTestsResponseBody;
 }

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
@@ -26,7 +26,7 @@ export class PostBucketsBucketKeyMessagesRequest extends SpeakeasyBase {
 /**
  * An object representing errors for this item. Only present if status is error, otherwise this will be null.
  */
-export class PostBucketsBucketKeyMessages200ApplicationJSONDataError extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
     /**
      * A numeric error code for the specific problem we encountered with this message. (error status only)
      */
@@ -52,7 +52,7 @@ export class PostBucketsBucketKeyMessages200ApplicationJSONDataError extends Spe
 /**
  * An object representing warnings (non-fatal warnings) for this item. Only present if status is warning, otherwise this will be null.
  */
-export class PostBucketsBucketKeyMessages200ApplicationJSONDataWarning extends SpeakeasyBase {
+export class Warning extends SpeakeasyBase {
     /**
      * A numeric error code for the specific problem we encountered with this message. (warning status only)
      */
@@ -75,14 +75,14 @@ export class PostBucketsBucketKeyMessages200ApplicationJSONDataWarning extends S
     moreInfo?: string;
 }
 
-export class PostBucketsBucketKeyMessages200ApplicationJSONData extends SpeakeasyBase {
+export class Data extends SpeakeasyBase {
     /**
      * An object representing errors for this item. Only present if status is error, otherwise this will be null.
      */
     @SpeakeasyMetadata()
     @Expose({ name: "error" })
-    @Type(() => PostBucketsBucketKeyMessages200ApplicationJSONDataError)
-    error?: PostBucketsBucketKeyMessages200ApplicationJSONDataError;
+    @Type(() => ErrorT)
+    error?: ErrorT;
 
     /**
      * One of the following: success, error, or warning.
@@ -110,11 +110,11 @@ export class PostBucketsBucketKeyMessages200ApplicationJSONData extends Speakeas
      */
     @SpeakeasyMetadata()
     @Expose({ name: "warning" })
-    @Type(() => PostBucketsBucketKeyMessages200ApplicationJSONDataWarning)
-    warning?: PostBucketsBucketKeyMessages200ApplicationJSONDataWarning;
+    @Type(() => Warning)
+    warning?: Warning;
 }
 
-export class PostBucketsBucketKeyMessages200ApplicationJSONMeta extends SpeakeasyBase {
+export class Meta extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "error_count" })
     errorCount?: number;
@@ -131,16 +131,16 @@ export class PostBucketsBucketKeyMessages200ApplicationJSONMeta extends Speakeas
 /**
  * The response includes a list of result objects for the message(s) submitted. It will always return an array, even if only one message was created. The order of the result objects corresponds to the order of messages submitted.
  */
-export class PostBucketsBucketKeyMessages200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PostBucketsBucketKeyMessages200ApplicationJSONData })
+export class PostBucketsBucketKeyMessagesResponseBody extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: Data })
     @Expose({ name: "data" })
-    @Type(() => PostBucketsBucketKeyMessages200ApplicationJSONData)
-    data?: PostBucketsBucketKeyMessages200ApplicationJSONData[];
+    @Type(() => Data)
+    data?: Data[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "meta" })
-    @Type(() => PostBucketsBucketKeyMessages200ApplicationJSONMeta)
-    meta?: PostBucketsBucketKeyMessages200ApplicationJSONMeta;
+    @Type(() => Meta)
+    meta?: Meta;
 }
 
 export class PostBucketsBucketKeyMessagesResponse extends SpeakeasyBase {
@@ -172,5 +172,5 @@ export class PostBucketsBucketKeyMessagesResponse extends SpeakeasyBase {
      * The response includes a list of result objects for the message(s) submitted. It will always return an array, even if only one message was created. The order of the result objects corresponds to the order of messages submitted.
      */
     @SpeakeasyMetadata()
-    postBucketsBucketKeyMessages200ApplicationJSONObject?: PostBucketsBucketKeyMessages200ApplicationJSON;
+    object?: PostBucketsBucketKeyMessagesResponseBody;
 }

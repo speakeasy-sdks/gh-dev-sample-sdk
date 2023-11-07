@@ -1,5 +1,5 @@
 # Account
-(*account*)
+(*.account*)
 
 ### Available Operations
 
@@ -23,6 +23,7 @@ import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 const operationSecurity: GetAccountSecurity = "";
 
   const res = await sdk.account.getAccount(operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,6 +61,7 @@ const operationSecurity: GetTeamsTeamIdAgentsSecurity = "";
   const res = await sdk.account.getTeamsTeamIdAgents({
     teamId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -99,6 +101,7 @@ const operationSecurity: GetTeamsTeamIdIntegrationsSecurity = "";
     teamId: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -136,6 +139,7 @@ const operationSecurity: GetTeamsTeamIdPeopleSecurity = "";
   const res = await sdk.account.getTeamsTeamIdPeople({
     teamId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

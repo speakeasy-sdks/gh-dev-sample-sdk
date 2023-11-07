@@ -1,4 +1,4 @@
-# PostBucketsBucketKeyTests200ApplicationJSON
+# GetBucketsBucketKeyTestsResponseBody
 
 List of tests for this bucket
 

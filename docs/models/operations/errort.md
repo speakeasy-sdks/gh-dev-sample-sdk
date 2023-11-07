@@ -1,4 +1,4 @@
-# PostBucketsBucketKeyMessages200ApplicationJSONDataError
+# ErrorT
 
 An object representing errors for this item. Only present if status is error, otherwise this will be null.
 

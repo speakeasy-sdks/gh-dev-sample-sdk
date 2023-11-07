@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetTeamsTeamIdPeopleSecurity extends SpeakeasyBase {
@@ -20,12 +20,6 @@ export class GetTeamsTeamIdPeopleRequest extends SpeakeasyBase {
 }
 
 export class GetTeamsTeamIdPeopleResponse extends SpeakeasyBase {
-    /**
-     * List of people associated with the team.
-     */
-    @SpeakeasyMetadata({ elemType: shared.Account })
-    accounts?: shared.Account[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -49,4 +43,10 @@ export class GetTeamsTeamIdPeopleResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * List of people associated with the team.
+     */
+    @SpeakeasyMetadata({ elemType: shared.Account })
+    classes?: shared.Account[];
 }

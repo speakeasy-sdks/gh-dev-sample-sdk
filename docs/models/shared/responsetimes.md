@@ -1,4 +1,4 @@
-# MetricsResponseTimes
+# ResponseTimes
 
 
 ## Fields

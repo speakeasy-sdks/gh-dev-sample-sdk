@@ -1,5 +1,5 @@
 # TestEnvironments
-(*testEnvironments*)
+(*.testEnvironments*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ const operationSecurity: GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity = ""
     bucketKey: "string",
     testId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -83,6 +84,7 @@ const operationSecurity: PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "
     testId: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -140,6 +142,7 @@ const operationSecurity: PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentId
     environmentId: "string",
     testId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,5 +1,5 @@
 # SharedEnvironments
-(*sharedEnvironments*)
+(*.sharedEnvironments*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ const operationSecurity: GetBucketsBucketKeyEnvironmentsSecurity = "";
   const res = await sdk.sharedEnvironments.getBucketsBucketKeyEnvironments({
     bucketKey: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -81,6 +82,7 @@ const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "";
     bucketKey: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -137,6 +139,7 @@ const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = 
     bucketKey: "string",
     environmentId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

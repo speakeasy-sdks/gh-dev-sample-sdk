@@ -3,10 +3,10 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { Account } from "./account";
 import { Buckets } from "./buckets";
 import { Messages } from "./messages";
-import * as shared from "./models/shared";
 import { SharedEnvironments } from "./sharedenvironments";
 import { TestEnvironments } from "./testenvironments";
 import { Tests } from "./tests";
@@ -52,9 +52,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.2.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 0.2.0 2.171.0 1.0.0 Runscope-API";
+    sdkVersion = "0.3.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.3.0 2.181.1 1.0.0 Runscope-API";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -67,11 +67,11 @@ export class SDKConfiguration {
 export class RunscopeAPI {
     public account: Account;
     public buckets: Buckets;
-    public messages: Messages;
     public sharedEnvironments: SharedEnvironments;
+    public messages: Messages;
+    public tests: Tests;
     public testEnvironments: TestEnvironments;
     public testSteps: TestSteps;
-    public tests: Tests;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -94,10 +94,10 @@ export class RunscopeAPI {
 
         this.account = new Account(this.sdkConfiguration);
         this.buckets = new Buckets(this.sdkConfiguration);
-        this.messages = new Messages(this.sdkConfiguration);
         this.sharedEnvironments = new SharedEnvironments(this.sdkConfiguration);
+        this.messages = new Messages(this.sdkConfiguration);
+        this.tests = new Tests(this.sdkConfiguration);
         this.testEnvironments = new TestEnvironments(this.sdkConfiguration);
         this.testSteps = new TestSteps(this.sdkConfiguration);
-        this.tests = new Tests(this.sdkConfiguration);
     }
 }

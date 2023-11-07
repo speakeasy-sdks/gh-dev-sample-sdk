@@ -1,11 +1,11 @@
-# GetBucketsBucketKeyTestsTestIdEnvironments200ApplicationJSON
+# GetTeamsTeamIdIntegrationsResponseBody
 
-List of environments belonging to this test.
+List of integrations associated with the team.
 
 
 ## Fields
 
 | Field                                                      | Type                                                       | Required                                                   | Description                                                |
 | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| `data`                                                     | [shared.Environment](../../models/shared/environment.md)[] | :heavy_minus_sign:                                         | N/A                                                        |
+| `data`                                                     | [shared.Integration](../../models/shared/integration.md)[] | :heavy_minus_sign:                                         | N/A                                                        |
 | `meta`                                                     | [shared.Meta](../../models/shared/meta.md)                 | :heavy_minus_sign:                                         | N/A                                                        |

@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class TestCreatedBy extends SpeakeasyBase {
+export class CreatedBy extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "email" })
     email?: string;
@@ -19,7 +19,7 @@ export class TestCreatedBy extends SpeakeasyBase {
     name?: string;
 }
 
-export class TestLastRun extends SpeakeasyBase {}
+export class LastRun extends SpeakeasyBase {}
 
 export class Test extends SpeakeasyBase {
     /**
@@ -31,8 +31,8 @@ export class Test extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "created_by" })
-    @Type(() => TestCreatedBy)
-    createdBy?: TestCreatedBy;
+    @Type(() => CreatedBy)
+    createdBy?: CreatedBy;
 
     @SpeakeasyMetadata()
     @Expose({ name: "default_environment_id" })
@@ -51,8 +51,8 @@ export class Test extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "last_run" })
-    @Type(() => TestLastRun)
-    lastRun?: TestLastRun;
+    @Type(() => LastRun)
+    lastRun?: LastRun;
 
     /**
      * The name for the test.

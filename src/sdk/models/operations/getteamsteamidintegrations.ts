@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
@@ -23,7 +23,7 @@ export class GetTeamsTeamIdIntegrationsRequest extends SpeakeasyBase {
 /**
  * List of integrations associated with the team.
  */
-export class GetTeamsTeamIdIntegrations200ApplicationJSON extends SpeakeasyBase {
+export class GetTeamsTeamIdIntegrationsResponseBody extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: shared.Integration })
     @Expose({ name: "data" })
     @Type(() => shared.Integration)
@@ -64,5 +64,5 @@ export class GetTeamsTeamIdIntegrationsResponse extends SpeakeasyBase {
      * List of integrations associated with the team.
      */
     @SpeakeasyMetadata()
-    getTeamsTeamIdIntegrations200ApplicationJSONObject?: GetTeamsTeamIdIntegrations200ApplicationJSON;
+    object?: GetTeamsTeamIdIntegrationsResponseBody;
 }

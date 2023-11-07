@@ -23,7 +23,7 @@ export class TestDetailCreatedBy extends SpeakeasyBase {
 
 export class TestDetailLastRun extends SpeakeasyBase {}
 
-export class TestDetailSteps extends SpeakeasyBase {}
+export class Steps extends SpeakeasyBase {}
 
 export class TestDetail extends SpeakeasyBase {
     /**
@@ -79,10 +79,10 @@ export class TestDetail extends SpeakeasyBase {
     @Type(() => Schedule)
     schedules?: Schedule[];
 
-    @SpeakeasyMetadata({ elemType: TestDetailSteps })
+    @SpeakeasyMetadata({ elemType: Steps })
     @Expose({ name: "steps" })
-    @Type(() => TestDetailSteps)
-    steps?: TestDetailSteps[];
+    @Type(() => Steps)
+    steps?: Steps[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "trigger_url" })

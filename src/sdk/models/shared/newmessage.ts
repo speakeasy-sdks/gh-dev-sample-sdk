@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class NewMessageRequest extends SpeakeasyBase {
+export class Request extends SpeakeasyBase {
     /**
      * HTTP request body (most commonly used for POST and PUT requests). If the
      *
@@ -69,7 +69,7 @@ export class NewMessageRequest extends SpeakeasyBase {
     url?: string;
 }
 
-export class NewMessageResponse extends SpeakeasyBase {
+export class Response extends SpeakeasyBase {
     /**
      * HTTP response body. If the response body contains binary data that cannot be
      *
@@ -136,11 +136,11 @@ export class NewMessageResponse extends SpeakeasyBase {
 export class NewMessage extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "request" })
-    @Type(() => NewMessageRequest)
-    request?: NewMessageRequest;
+    @Type(() => Request)
+    request?: Request;
 
     @SpeakeasyMetadata()
     @Expose({ name: "response" })
-    @Type(() => NewMessageResponse)
-    response?: NewMessageResponse;
+    @Type(() => Response)
+    response?: Response;
 }

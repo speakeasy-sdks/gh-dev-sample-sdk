@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
@@ -18,7 +18,7 @@ export class GetBucketsSecurity extends SpeakeasyBase {
 /**
  * List of buckets associated with this authenticated account.
  */
-export class GetBuckets200ApplicationJSON extends SpeakeasyBase {
+export class GetBucketsResponseBody extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: shared.Bucket })
     @Expose({ name: "data" })
     @Type(() => shared.Bucket)
@@ -59,5 +59,5 @@ export class GetBucketsResponse extends SpeakeasyBase {
      * List of buckets associated with this authenticated account.
      */
     @SpeakeasyMetadata()
-    getBuckets200ApplicationJSONObject?: GetBuckets200ApplicationJSON;
+    object?: GetBucketsResponseBody;
 }

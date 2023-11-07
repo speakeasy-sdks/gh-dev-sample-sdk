@@ -1,5 +1,5 @@
 # Buckets
-(*buckets*)
+(*.buckets*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ const operationSecurity: DeleteBucketsBucketKeySecurity = "";
   const res = await sdk.buckets.deleteBucketsBucketKey({
     bucketKey: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -64,6 +65,7 @@ const operationSecurity: GetBucketsSecurity = {
 
   const res = await sdk.buckets.getBuckets(operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -100,6 +102,7 @@ import { RunscopeAPI } from "Runscope-API";
   const res = await sdk.buckets.getBucketsBucketKey({
     bucketKey: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -138,6 +141,7 @@ const operationSecurity: PostBucketsSecurity = "";
     name: "string",
     teamId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

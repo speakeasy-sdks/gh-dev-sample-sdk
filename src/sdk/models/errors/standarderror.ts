@@ -7,13 +7,13 @@ import { Error400 } from "./error400";
 import { Meta } from "./meta";
 import { classToPlain, Expose, Type } from "class-transformer";
 
-export class StandardErrorData extends SpeakeasyBase {}
+export class Data extends SpeakeasyBase {}
 
 export class StandardError extends Error {
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
-    @Type(() => StandardErrorData)
-    data?: StandardErrorData;
+    @Type(() => Data)
+    data?: Data;
 
     @SpeakeasyMetadata()
     @Expose({ name: "error" })

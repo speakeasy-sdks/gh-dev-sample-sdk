@@ -1,5 +1,5 @@
 # TestSteps
-(*testSteps*)
+(*.testSteps*)
 
 ### Available Operations
 
@@ -27,6 +27,7 @@ const operationSecurity: DeleteBucketsBucketKeyTestsTestIdStepsStepIdSecurity = 
     stepId: "string",
     testId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -66,6 +67,7 @@ const operationSecurity: GetBucketsBucketKeyTestsTestIdStepsSecurity = "";
     bucketKey: "string",
     testId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -107,6 +109,7 @@ const operationSecurity: PostBucketsBucketKeyTestsTestIdStepsSecurity = "";
     testId: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -147,6 +150,7 @@ const operationSecurity: PutBucketsBucketKeyTestsTestIdStepsStepIdSecurity = "";
     stepId: "string",
     testId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

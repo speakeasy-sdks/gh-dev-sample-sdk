@@ -7,11 +7,11 @@ import { Agent } from "./agent";
 import { Integration } from "./integration";
 import { Expose, Type } from "class-transformer";
 
-export class EnvironmentEmails extends SpeakeasyBase {}
+export class Emails extends SpeakeasyBase {}
 
-export class EnvironmentHeaders extends SpeakeasyBase {}
+export class Headers extends SpeakeasyBase {}
 
-export class EnvironmentInitialVariables extends SpeakeasyBase {}
+export class InitialVariables extends SpeakeasyBase {}
 
 export class Environment extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -24,8 +24,8 @@ export class Environment extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "emails" })
-    @Type(() => EnvironmentEmails)
-    emails?: EnvironmentEmails;
+    @Type(() => Emails)
+    emails?: Emails;
 
     @SpeakeasyMetadata()
     @Expose({ name: "exported_at" })
@@ -33,8 +33,8 @@ export class Environment extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "headers" })
-    @Type(() => EnvironmentHeaders)
-    headers?: EnvironmentHeaders;
+    @Type(() => Headers)
+    headers?: Headers;
 
     /**
      * The unique identifier for this environment.
@@ -49,8 +49,8 @@ export class Environment extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "initial_variables" })
-    @Type(() => EnvironmentInitialVariables)
-    initialVariables?: EnvironmentInitialVariables;
+    @Type(() => InitialVariables)
+    initialVariables?: InitialVariables;
 
     /**
      * The list of integrations for this environment.

@@ -8,9 +8,9 @@ import { Expose, Type } from "class-transformer";
 /**
  * The changes in average response time compared to the last period.
  */
-export class MetricsChangesFromLastPeriod extends SpeakeasyBase {}
+export class ChangesFromLastPeriod extends SpeakeasyBase {}
 
-export class MetricsResponseTimes extends SpeakeasyBase {
+export class ResponseTimes extends SpeakeasyBase {
     /**
      * The average response time in miliseconds for all the requests for this test in this time interval.
      */
@@ -36,7 +36,7 @@ export class MetricsResponseTimes extends SpeakeasyBase {
 /**
  * The average response time for different percentiles for the request in the requested timeframe.
  */
-export class MetricsThisTimePeriod extends SpeakeasyBase {}
+export class ThisTimePeriod extends SpeakeasyBase {}
 
 export class Metrics extends SpeakeasyBase {
     /**
@@ -44,8 +44,8 @@ export class Metrics extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "changes_from_last_period" })
-    @Type(() => MetricsChangesFromLastPeriod)
-    changesFromLastPeriod?: MetricsChangesFromLastPeriod;
+    @Type(() => ChangesFromLastPeriod)
+    changesFromLastPeriod?: ChangesFromLastPeriod;
 
     /**
      * The environment_uuid that filters this request.
@@ -64,18 +64,18 @@ export class Metrics extends SpeakeasyBase {
     /**
      * The list of response times based on the timeframe of the request.
      */
-    @SpeakeasyMetadata({ elemType: MetricsResponseTimes })
+    @SpeakeasyMetadata({ elemType: ResponseTimes })
     @Expose({ name: "response_times" })
-    @Type(() => MetricsResponseTimes)
-    responseTimes?: MetricsResponseTimes[];
+    @Type(() => ResponseTimes)
+    responseTimes?: ResponseTimes[];
 
     /**
      * The average response time for different percentiles for the request in the requested timeframe.
      */
     @SpeakeasyMetadata()
     @Expose({ name: "this_time_period" })
-    @Type(() => MetricsThisTimePeriod)
-    thisTimePeriod?: MetricsThisTimePeriod;
+    @Type(() => ThisTimePeriod)
+    thisTimePeriod?: ThisTimePeriod;
 
     /**
      * The timeframe that filters this request.

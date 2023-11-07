@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class GetTeamsTeamIdAgentsSecurity extends SpeakeasyBase {
@@ -20,12 +20,6 @@ export class GetTeamsTeamIdAgentsRequest extends SpeakeasyBase {
 }
 
 export class GetTeamsTeamIdAgentsResponse extends SpeakeasyBase {
-    /**
-     * List of the team’s currently connected agents.
-     */
-    @SpeakeasyMetadata({ elemType: shared.Agent })
-    agents?: shared.Agent[];
-
     /**
      * HTTP response content type for this operation
      */
@@ -49,4 +43,10 @@ export class GetTeamsTeamIdAgentsResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * List of the team’s currently connected agents.
+     */
+    @SpeakeasyMetadata({ elemType: shared.Agent })
+    classes?: shared.Agent[];
 }

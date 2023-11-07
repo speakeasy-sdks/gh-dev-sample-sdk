@@ -1,5 +1,5 @@
 # Tests
-(*tests*)
+(*.tests*)
 
 ### Available Operations
 
@@ -28,6 +28,7 @@ const operationSecurity: DeleteBucketsBucketKeyTestsTestIdSecurity = "";
     bucketKey: "string",
     testId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -66,6 +67,7 @@ const operationSecurity: GetBucketsBucketKeyTestsSecurity = "";
   const res = await sdk.tests.getBucketsBucketKeyTests({
     bucketKey: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -106,6 +108,7 @@ const operationSecurity: GetBucketsBucketKeyTestsTestIdSecurity = "";
     testId: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -144,6 +147,7 @@ const operationSecurity: GetBucketsBucketKeyTestsTestIdMetricsSecurity = "";
     bucketKey: "string",
     testId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -188,6 +192,7 @@ const operationSecurity: PostBucketsBucketKeyTestsSecurity = "";
     bucketKey: "string",
   }, operationSecurity);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -226,6 +231,7 @@ const operationSecurity: PutBucketsBucketKeyTestsTestIdSecurity = "";
     bucketKey: "string",
     testId: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response

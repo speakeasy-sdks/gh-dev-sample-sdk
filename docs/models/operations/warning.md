@@ -1,4 +1,4 @@
-# PostBucketsBucketKeyMessages200ApplicationJSONDataWarning
+# Warning
 
 An object representing warnings (non-fatal warnings) for this item. Only present if status is warning, otherwise this will be null.
 

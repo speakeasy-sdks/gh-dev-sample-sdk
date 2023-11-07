@@ -1,5 +1,5 @@
 # Messages
-(*messages*)
+(*.messages*)
 
 ### Available Operations
 
@@ -26,6 +26,7 @@ const operationSecurity: DeleteBucketsBucketKeyMessagesSecurity = "";
   const res = await sdk.messages.deleteBucketsBucketKeyMessages({
     bucketKey: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -65,6 +66,7 @@ import { RunscopeAPI } from "Runscope-API";
     bucketKey: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -101,6 +103,7 @@ import { RunscopeAPI } from "Runscope-API";
   const res = await sdk.messages.getBucketsBucketKeyMessages({
     bucketKey: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -139,6 +142,7 @@ import { RunscopeAPI } from "Runscope-API";
     bucketKey: "string",
     messageId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -180,6 +184,7 @@ const operationSecurity: PostBucketsBucketKeyMessagesSecurity = "";
     },
     bucketKey: "string",
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
