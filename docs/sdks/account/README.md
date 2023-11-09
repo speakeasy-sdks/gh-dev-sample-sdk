@@ -1,5 +1,5 @@
 # Account
-(*.account*)
+(*account*)
 
 ### Available Operations
 
@@ -24,7 +24,6 @@ const operationSecurity: GetAccountSecurity = "";
 
   const res = await sdk.account.getAccount(operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -33,16 +32,20 @@ const operationSecurity: GetAccountSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `security`                                                                     | [operations.GetAccountSecurity](../../models/operations/getaccountsecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `security`                                                                         | [operations.GetAccountSecurity](../../sdk/models/operations/getaccountsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.GetAccountResponse](../../models/operations/getaccountresponse.md)>**
+**Promise<[operations.GetAccountResponse](../../sdk/models/operations/getaccountresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTeamsTeamIdAgents
 
@@ -62,7 +65,6 @@ const operationSecurity: GetTeamsTeamIdAgentsSecurity = "";
     teamId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -71,17 +73,21 @@ const operationSecurity: GetTeamsTeamIdAgentsSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetTeamsTeamIdAgentsRequest](../../models/operations/getteamsteamidagentsrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.GetTeamsTeamIdAgentsSecurity](../../models/operations/getteamsteamidagentssecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.GetTeamsTeamIdAgentsRequest](../../sdk/models/operations/getteamsteamidagentsrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `security`                                                                                             | [operations.GetTeamsTeamIdAgentsSecurity](../../sdk/models/operations/getteamsteamidagentssecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetTeamsTeamIdAgentsResponse](../../models/operations/getteamsteamidagentsresponse.md)>**
+**Promise<[operations.GetTeamsTeamIdAgentsResponse](../../sdk/models/operations/getteamsteamidagentsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTeamsTeamIdIntegrations
 
@@ -101,7 +107,6 @@ const operationSecurity: GetTeamsTeamIdIntegrationsSecurity = "";
     teamId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -110,17 +115,21 @@ const operationSecurity: GetTeamsTeamIdIntegrationsSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetTeamsTeamIdIntegrationsRequest](../../models/operations/getteamsteamidintegrationsrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [operations.GetTeamsTeamIdIntegrationsSecurity](../../models/operations/getteamsteamidintegrationssecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.GetTeamsTeamIdIntegrationsRequest](../../sdk/models/operations/getteamsteamidintegrationsrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `security`                                                                                                         | [operations.GetTeamsTeamIdIntegrationsSecurity](../../sdk/models/operations/getteamsteamidintegrationssecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetTeamsTeamIdIntegrationsResponse](../../models/operations/getteamsteamidintegrationsresponse.md)>**
+**Promise<[operations.GetTeamsTeamIdIntegrationsResponse](../../sdk/models/operations/getteamsteamidintegrationsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTeamsTeamIdPeople
 
@@ -140,7 +149,6 @@ const operationSecurity: GetTeamsTeamIdPeopleSecurity = "";
     teamId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -149,14 +157,18 @@ const operationSecurity: GetTeamsTeamIdPeopleSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetTeamsTeamIdPeopleRequest](../../models/operations/getteamsteamidpeoplerequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.GetTeamsTeamIdPeopleSecurity](../../models/operations/getteamsteamidpeoplesecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.GetTeamsTeamIdPeopleRequest](../../sdk/models/operations/getteamsteamidpeoplerequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `security`                                                                                             | [operations.GetTeamsTeamIdPeopleSecurity](../../sdk/models/operations/getteamsteamidpeoplesecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.GetTeamsTeamIdPeopleResponse](../../models/operations/getteamsteamidpeopleresponse.md)>**
+**Promise<[operations.GetTeamsTeamIdPeopleResponse](../../sdk/models/operations/getteamsteamidpeopleresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,6 +1,6 @@
 {
   "name": "Runscope-API",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "gh-dev",
   "scripts": {
     "prepare": "tsc --build",

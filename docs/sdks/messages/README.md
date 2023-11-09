@@ -1,5 +1,5 @@
 # Messages
-(*.messages*)
+(*messages*)
 
 ### Available Operations
 
@@ -27,7 +27,6 @@ const operationSecurity: DeleteBucketsBucketKeyMessagesSecurity = "";
     bucketKey: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -36,17 +35,21 @@ const operationSecurity: DeleteBucketsBucketKeyMessagesSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.DeleteBucketsBucketKeyMessagesRequest](../../models/operations/deletebucketsbucketkeymessagesrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [operations.DeleteBucketsBucketKeyMessagesSecurity](../../models/operations/deletebucketsbucketkeymessagessecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.DeleteBucketsBucketKeyMessagesRequest](../../sdk/models/operations/deletebucketsbucketkeymessagesrequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `security`                                                                                                                 | [operations.DeleteBucketsBucketKeyMessagesSecurity](../../sdk/models/operations/deletebucketsbucketkeymessagessecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeleteBucketsBucketKeyMessagesResponse](../../models/operations/deletebucketsbucketkeymessagesresponse.md)>**
+**Promise<[operations.DeleteBucketsBucketKeyMessagesResponse](../../sdk/models/operations/deletebucketsbucketkeymessagesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBucketsBucketKeyErrors
 
@@ -66,7 +69,6 @@ import { RunscopeAPI } from "Runscope-API";
     bucketKey: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -75,16 +77,20 @@ import { RunscopeAPI } from "Runscope-API";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetBucketsBucketKeyErrorsRequest](../../models/operations/getbucketsbucketkeyerrorsrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.GetBucketsBucketKeyErrorsRequest](../../sdk/models/operations/getbucketsbucketkeyerrorsrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.GetBucketsBucketKeyErrorsResponse](../../models/operations/getbucketsbucketkeyerrorsresponse.md)>**
+**Promise<[operations.GetBucketsBucketKeyErrorsResponse](../../sdk/models/operations/getbucketsbucketkeyerrorsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBucketsBucketKeyMessages
 
@@ -104,7 +110,6 @@ import { RunscopeAPI } from "Runscope-API";
     bucketKey: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -113,16 +118,20 @@ import { RunscopeAPI } from "Runscope-API";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetBucketsBucketKeyMessagesRequest](../../models/operations/getbucketsbucketkeymessagesrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.GetBucketsBucketKeyMessagesRequest](../../sdk/models/operations/getbucketsbucketkeymessagesrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetBucketsBucketKeyMessagesResponse](../../models/operations/getbucketsbucketkeymessagesresponse.md)>**
+**Promise<[operations.GetBucketsBucketKeyMessagesResponse](../../sdk/models/operations/getbucketsbucketkeymessagesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBucketsBucketKeyMessagesMessageId
 
@@ -143,7 +152,6 @@ import { RunscopeAPI } from "Runscope-API";
     messageId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,16 +160,20 @@ import { RunscopeAPI } from "Runscope-API";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.GetBucketsBucketKeyMessagesMessageIdRequest](../../models/operations/getbucketsbucketkeymessagesmessageidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.GetBucketsBucketKeyMessagesMessageIdRequest](../../sdk/models/operations/getbucketsbucketkeymessagesmessageidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.GetBucketsBucketKeyMessagesMessageIdResponse](../../models/operations/getbucketsbucketkeymessagesmessageidresponse.md)>**
+**Promise<[operations.GetBucketsBucketKeyMessagesMessageIdResponse](../../sdk/models/operations/getbucketsbucketkeymessagesmessageidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postBucketsBucketKeyMessages
 
@@ -185,7 +197,6 @@ const operationSecurity: PostBucketsBucketKeyMessagesSecurity = "";
     bucketKey: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -194,14 +205,18 @@ const operationSecurity: PostBucketsBucketKeyMessagesSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PostBucketsBucketKeyMessagesRequest](../../models/operations/postbucketsbucketkeymessagesrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.PostBucketsBucketKeyMessagesSecurity](../../models/operations/postbucketsbucketkeymessagessecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.PostBucketsBucketKeyMessagesRequest](../../sdk/models/operations/postbucketsbucketkeymessagesrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `security`                                                                                                             | [operations.PostBucketsBucketKeyMessagesSecurity](../../sdk/models/operations/postbucketsbucketkeymessagessecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PostBucketsBucketKeyMessagesResponse](../../models/operations/postbucketsbucketkeymessagesresponse.md)>**
+**Promise<[operations.PostBucketsBucketKeyMessagesResponse](../../sdk/models/operations/postbucketsbucketkeymessagesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

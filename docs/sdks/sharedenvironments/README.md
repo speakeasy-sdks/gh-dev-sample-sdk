@@ -1,5 +1,5 @@
 # SharedEnvironments
-(*.sharedEnvironments*)
+(*sharedEnvironments*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ const operationSecurity: GetBucketsBucketKeyEnvironmentsSecurity = "";
     bucketKey: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -34,17 +33,21 @@ const operationSecurity: GetBucketsBucketKeyEnvironmentsSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.GetBucketsBucketKeyEnvironmentsRequest](../../models/operations/getbucketsbucketkeyenvironmentsrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.GetBucketsBucketKeyEnvironmentsSecurity](../../models/operations/getbucketsbucketkeyenvironmentssecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.GetBucketsBucketKeyEnvironmentsRequest](../../sdk/models/operations/getbucketsbucketkeyenvironmentsrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `security`                                                                                                                   | [operations.GetBucketsBucketKeyEnvironmentsSecurity](../../sdk/models/operations/getbucketsbucketkeyenvironmentssecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.GetBucketsBucketKeyEnvironmentsResponse](../../models/operations/getbucketsbucketkeyenvironmentsresponse.md)>**
+**Promise<[operations.GetBucketsBucketKeyEnvironmentsResponse](../../sdk/models/operations/getbucketsbucketkeyenvironmentsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postBucketsBucketKeyEnvironments
 
@@ -82,7 +85,6 @@ const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "";
     bucketKey: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -91,17 +93,21 @@ const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.PostBucketsBucketKeyEnvironmentsRequest](../../models/operations/postbucketsbucketkeyenvironmentsrequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [operations.PostBucketsBucketKeyEnvironmentsSecurity](../../models/operations/postbucketsbucketkeyenvironmentssecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.PostBucketsBucketKeyEnvironmentsRequest](../../sdk/models/operations/postbucketsbucketkeyenvironmentsrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `security`                                                                                                                     | [operations.PostBucketsBucketKeyEnvironmentsSecurity](../../sdk/models/operations/postbucketsbucketkeyenvironmentssecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.PostBucketsBucketKeyEnvironmentsResponse](../../models/operations/postbucketsbucketkeyenvironmentsresponse.md)>**
+**Promise<[operations.PostBucketsBucketKeyEnvironmentsResponse](../../sdk/models/operations/postbucketsbucketkeyenvironmentsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## putBucketsBucketKeyEnvironmentsEnvironmentId
 
@@ -140,7 +146,6 @@ const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = 
     environmentId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -149,14 +154,18 @@ const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = 
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdRequest](../../models/operations/putbucketsbucketkeyenvironmentsenvironmentidrequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `security`                                                                                                                                         | [operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity](../../models/operations/putbucketsbucketkeyenvironmentsenvironmentidsecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdRequest](../../sdk/models/operations/putbucketsbucketkeyenvironmentsenvironmentidrequest.md)   | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| `security`                                                                                                                                             | [operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity](../../sdk/models/operations/putbucketsbucketkeyenvironmentsenvironmentidsecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
+| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdResponse](../../models/operations/putbucketsbucketkeyenvironmentsenvironmentidresponse.md)>**
+**Promise<[operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdResponse](../../sdk/models/operations/putbucketsbucketkeyenvironmentsenvironmentidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

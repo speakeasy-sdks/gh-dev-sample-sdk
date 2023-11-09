@@ -32,7 +32,7 @@ export class Buckets {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/buckets/{bucketKey}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/buckets/{bucketKey}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.DeleteBucketsBucketKeySecurity(security);
@@ -45,7 +45,7 @@ export class Buckets {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -104,7 +104,7 @@ export class Buckets {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/buckets";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/buckets";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetBucketsSecurity(security);
@@ -117,7 +117,7 @@ export class Buckets {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -192,7 +192,7 @@ export class Buckets {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/buckets/{bucketKey}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/buckets/{bucketKey}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -209,7 +209,7 @@ export class Buckets {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -283,7 +283,7 @@ export class Buckets {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/buckets";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/buckets";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -311,7 +311,7 @@ export class Buckets {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

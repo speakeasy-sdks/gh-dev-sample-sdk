@@ -30,7 +30,7 @@ export class Account {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/account";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/account";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetAccountSecurity(security);
@@ -43,7 +43,7 @@ export class Account {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -122,7 +122,7 @@ export class Account {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/teams/{teamId}/agents", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/teams/{teamId}/agents", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTeamsTeamIdAgentsSecurity(security);
@@ -135,7 +135,7 @@ export class Account {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -218,7 +218,11 @@ export class Account {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/teams/{teamId}/integrations", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/teams/{teamId}/integrations",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTeamsTeamIdIntegrationsSecurity(security);
@@ -231,7 +235,7 @@ export class Account {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -311,7 +315,7 @@ export class Account {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/teams/{teamId}/people", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/teams/{teamId}/people", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetTeamsTeamIdPeopleSecurity(security);
@@ -324,7 +328,7 @@ export class Account {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",

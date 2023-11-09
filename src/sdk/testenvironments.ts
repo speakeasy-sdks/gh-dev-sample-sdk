@@ -31,7 +31,7 @@ export class TestEnvironments {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/buckets/{bucketKey}/tests/{testId}/environments",
             req
@@ -48,7 +48,7 @@ export class TestEnvironments {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -113,7 +113,7 @@ export class TestEnvironments {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/buckets/{bucketKey}/tests/{testId}/environments",
             req
@@ -145,7 +145,7 @@ export class TestEnvironments {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -199,7 +199,7 @@ export class TestEnvironments {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/buckets/{bucketKey}/tests/{testId}/environments/{environmentId}",
             req
@@ -234,7 +234,7 @@ export class TestEnvironments {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

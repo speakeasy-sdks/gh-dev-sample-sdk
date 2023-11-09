@@ -54,27 +54,27 @@ import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 ## Available Resources and Operations
 
 
-### [.account](docs/sdks/account/README.md)
+### [account](docs/sdks/account/README.md)
 
 * [getAccount](docs/sdks/account/README.md#getaccount) - Account Resource
 * [getTeamsTeamIdAgents](docs/sdks/account/README.md#getteamsteamidagents) - Team agents list
 * [getTeamsTeamIdIntegrations](docs/sdks/account/README.md#getteamsteamidintegrations) - Team integrations list
 * [getTeamsTeamIdPeople](docs/sdks/account/README.md#getteamsteamidpeople) - Teams Resource
 
-### [.buckets](docs/sdks/buckets/README.md)
+### [buckets](docs/sdks/buckets/README.md)
 
 * [deleteBucketsBucketKey](docs/sdks/buckets/README.md#deletebucketsbucketkey) - Delete a single bucket resource.
 * [getBuckets](docs/sdks/buckets/README.md#getbuckets) - Returns a list of buckets.
 * [getBucketsBucketKey](docs/sdks/buckets/README.md#getbucketsbucketkey) - Returns a single bucket resource.
 * [postBuckets](docs/sdks/buckets/README.md#postbuckets) - Create a new bucket
 
-### [.sharedEnvironments](docs/sdks/sharedenvironments/README.md)
+### [sharedEnvironments](docs/sdks/sharedenvironments/README.md)
 
 * [getBucketsBucketKeyEnvironments](docs/sdks/sharedenvironments/README.md#getbucketsbucketkeyenvironments) - Returns list of shared environments for a specified bucket.
 * [postBucketsBucketKeyEnvironments](docs/sdks/sharedenvironments/README.md#postbucketsbucketkeyenvironments) - Create new shared environment.
 * [putBucketsBucketKeyEnvironmentsEnvironmentId](docs/sdks/sharedenvironments/README.md#putbucketsbucketkeyenvironmentsenvironmentid) - Update the details of a shared environment.
 
-### [.messages](docs/sdks/messages/README.md)
+### [messages](docs/sdks/messages/README.md)
 
 * [deleteBucketsBucketKeyMessages](docs/sdks/messages/README.md#deletebucketsbucketkeymessages) - Clear a bucket (remove all messages).
 * [getBucketsBucketKeyErrors](docs/sdks/messages/README.md#getbucketsbucketkeyerrors) - Retrieve a list of error messages in a bucket
@@ -82,7 +82,7 @@ import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 * [getBucketsBucketKeyMessagesMessageId](docs/sdks/messages/README.md#getbucketsbucketkeymessagesmessageid) - Retrieve the details for a single message.
 * [postBucketsBucketKeyMessages](docs/sdks/messages/README.md#postbucketsbucketkeymessages) - Create a message
 
-### [.tests](docs/sdks/tests/README.md)
+### [tests](docs/sdks/tests/README.md)
 
 * [deleteBucketsBucketKeyTestsTestId](docs/sdks/tests/README.md#deletebucketsbucketkeyteststestid) - Delete a test, including all steps, schedules, test-specific environments and results.
 * [getBucketsBucketKeyTests](docs/sdks/tests/README.md#getbucketsbucketkeytests) - Returns a list of tests.
@@ -91,13 +91,13 @@ import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 * [postBucketsBucketKeyTests](docs/sdks/tests/README.md#postbucketsbucketkeytests) - Create a test.
 * [putBucketsBucketKeyTestsTestId](docs/sdks/tests/README.md#putbucketsbucketkeyteststestid) - Modify a test's name, description, default environment and its steps. To modify other individual properties of a test, make requests to the steps, environments, and schedules subresources of the test.
 
-### [.testEnvironments](docs/sdks/testenvironments/README.md)
+### [testEnvironments](docs/sdks/testenvironments/README.md)
 
 * [getBucketsBucketKeyTestsTestIdEnvironments](docs/sdks/testenvironments/README.md#getbucketsbucketkeyteststestidenvironments) - Return details of the test's environments (only those that belong to the specified test)
 * [postBucketsBucketKeyTestsTestIdEnvironments](docs/sdks/testenvironments/README.md#postbucketsbucketkeyteststestidenvironments) - Create new test environment.
 * [putBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentId](docs/sdks/testenvironments/README.md#putbucketsbucketkeyteststestidenvironmentsenvironmentid) - Update the details of a test environment.
 
-### [.testSteps](docs/sdks/teststeps/README.md)
+### [testSteps](docs/sdks/teststeps/README.md)
 
 * [deleteBucketsBucketKeyTestsTestIdStepsStepId](docs/sdks/teststeps/README.md#deletebucketsbucketkeyteststestidstepsstepid) - Delete a step from a test.
 * [getBucketsBucketKeyTestsTestIdSteps](docs/sdks/teststeps/README.md#getbucketsbucketkeyteststestidsteps) - List test steps for a test.
@@ -114,7 +114,12 @@ import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object         | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| errors.StandardError | 400                  | application/json     |
+| errors.SDKError      | 400-600              | */*                  |
 
 
 ## Example
@@ -136,11 +141,10 @@ const operationSecurity: PostBucketsBucketKeyTestsTestIdStepsSecurity = "";
     testId: "string",
   }, operationSecurity);
   } catch (e) { 
-    if (e instanceof StandardError) {
+    if (e instanceof errors.StandardError) {
       console.error(e) // handle exception 
     
   }
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -229,19 +233,16 @@ const httpClient = axios.create({
 
 const sdk = new RunscopeAPI({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name           | Type           | Scheme         |
 | -------------- | -------------- | -------------- |
@@ -268,7 +269,7 @@ import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 ## Per-Operation Security Schemes
 
-Some operations in your SDK require the security scheme to be specified at the request level. For example:
+Some operations in this SDK require the security scheme to be specified at the request level. For example:
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";

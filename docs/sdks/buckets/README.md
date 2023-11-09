@@ -1,5 +1,5 @@
 # Buckets
-(*.buckets*)
+(*buckets*)
 
 ### Available Operations
 
@@ -26,7 +26,6 @@ const operationSecurity: DeleteBucketsBucketKeySecurity = "";
     bucketKey: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -35,17 +34,21 @@ const operationSecurity: DeleteBucketsBucketKeySecurity = "";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.DeleteBucketsBucketKeyRequest](../../models/operations/deletebucketsbucketkeyrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.DeleteBucketsBucketKeySecurity](../../models/operations/deletebucketsbucketkeysecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.DeleteBucketsBucketKeyRequest](../../sdk/models/operations/deletebucketsbucketkeyrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.DeleteBucketsBucketKeySecurity](../../sdk/models/operations/deletebucketsbucketkeysecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.DeleteBucketsBucketKeyResponse](../../models/operations/deletebucketsbucketkeyresponse.md)>**
+**Promise<[operations.DeleteBucketsBucketKeyResponse](../../sdk/models/operations/deletebucketsbucketkeyresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBuckets
 
@@ -65,7 +68,6 @@ const operationSecurity: GetBucketsSecurity = {
 
   const res = await sdk.buckets.getBuckets(operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,16 +76,20 @@ const operationSecurity: GetBucketsSecurity = {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `security`                                                                     | [operations.GetBucketsSecurity](../../models/operations/getbucketssecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `security`                                                                         | [operations.GetBucketsSecurity](../../sdk/models/operations/getbucketssecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.GetBucketsResponse](../../models/operations/getbucketsresponse.md)>**
+**Promise<[operations.GetBucketsResponse](../../sdk/models/operations/getbucketsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBucketsBucketKey
 
@@ -103,7 +109,6 @@ import { RunscopeAPI } from "Runscope-API";
     bucketKey: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -112,16 +117,20 @@ import { RunscopeAPI } from "Runscope-API";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetBucketsBucketKeyRequest](../../models/operations/getbucketsbucketkeyrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetBucketsBucketKeyRequest](../../sdk/models/operations/getbucketsbucketkeyrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetBucketsBucketKeyResponse](../../models/operations/getbucketsbucketkeyresponse.md)>**
+**Promise<[operations.GetBucketsBucketKeyResponse](../../sdk/models/operations/getbucketsbucketkeyresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postBuckets
 
@@ -142,7 +151,6 @@ const operationSecurity: PostBucketsSecurity = "";
     teamId: "string",
   }, operationSecurity);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -151,14 +159,18 @@ const operationSecurity: PostBucketsSecurity = "";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [shared.NewBucket](../../models/shared/newbucket.md)                             | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `security`                                                                       | [operations.PostBucketsSecurity](../../models/operations/postbucketssecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [shared.NewBucket](../../sdk/models/shared/newbucket.md)                             | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.PostBucketsSecurity](../../sdk/models/operations/postbucketssecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.PostBucketsResponse](../../models/operations/postbucketsresponse.md)>**
+**Promise<[operations.PostBucketsResponse](../../sdk/models/operations/postbucketsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

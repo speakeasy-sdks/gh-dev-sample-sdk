@@ -31,7 +31,11 @@ export class SharedEnvironments {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/buckets/{bucketKey}/environments", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/buckets/{bucketKey}/environments",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetBucketsBucketKeyEnvironmentsSecurity(security);
@@ -44,7 +48,7 @@ export class SharedEnvironments {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -95,7 +99,11 @@ export class SharedEnvironments {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/buckets/{bucketKey}/environments", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/buckets/{bucketKey}/environments",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -123,7 +131,7 @@ export class SharedEnvironments {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -175,7 +183,7 @@ export class SharedEnvironments {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/buckets/{bucketKey}/environments/{environmentId}",
             req
@@ -209,7 +217,7 @@ export class SharedEnvironments {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
