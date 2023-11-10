@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
 import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";

@@ -57,7 +57,7 @@ export class TestSteps {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -66,7 +66,7 @@ export class TestSteps {
         const res: operations.DeleteBucketsBucketKeyTestsTestIdStepsStepIdResponse =
             new operations.DeleteBucketsBucketKeyTestsTestIdStepsStepIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -125,7 +125,7 @@ export class TestSteps {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -134,7 +134,7 @@ export class TestSteps {
         const res: operations.GetBucketsBucketKeyTestsTestIdStepsResponse =
             new operations.GetBucketsBucketKeyTestsTestIdStepsResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -209,7 +209,7 @@ export class TestSteps {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -218,7 +218,7 @@ export class TestSteps {
         const res: operations.PostBucketsBucketKeyTestsTestIdStepsResponse =
             new operations.PostBucketsBucketKeyTestsTestIdStepsResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
@@ -226,13 +226,13 @@ export class TestSteps {
             case httpRes?.status == 201:
                 break;
             case httpRes?.status == 400:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(JSON.parse(decodedRes), errors.StandardError);
                     err.rawResponse = httpRes;
                     throw new errors.StandardError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -308,7 +308,7 @@ export class TestSteps {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -317,7 +317,7 @@ export class TestSteps {
         const res: operations.PutBucketsBucketKeyTestsTestIdStepsStepIdResponse =
             new operations.PutBucketsBucketKeyTestsTestIdStepsStepIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
@@ -325,13 +325,13 @@ export class TestSteps {
             case httpRes?.status == 200:
                 break;
             case httpRes?.status == 400:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     const err = utils.objectToClass(JSON.parse(decodedRes), errors.StandardError);
                     err.rawResponse = httpRes;
                     throw new errors.StandardError(err);
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
