@@ -42,7 +42,7 @@ export class GetTeamsTeamIdAgentsResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * List of the team’s currently connected agents.

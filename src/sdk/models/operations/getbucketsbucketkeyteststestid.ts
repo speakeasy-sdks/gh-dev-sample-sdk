@@ -48,7 +48,7 @@ export class GetBucketsBucketKeyTestsTestIdResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * Returns an object with the details of the given test.
