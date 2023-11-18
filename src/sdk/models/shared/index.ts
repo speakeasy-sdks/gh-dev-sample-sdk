@@ -7,6 +7,7 @@ export * from "./agent";
 export * from "./bucket";
 export * from "./environment";
 export * from "./error";
+export * from "./error400";
 export * from "./integration";
 export * from "./meta";
 export * from "./metrics";

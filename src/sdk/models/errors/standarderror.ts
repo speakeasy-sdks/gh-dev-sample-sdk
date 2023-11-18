@@ -3,12 +3,14 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Error400 } from "./error400";
-import { Meta } from "./meta";
+import * as shared from "../../../sdk/models/shared";
 import { classToPlain, Expose, Type } from "class-transformer";
 
 export class Data extends SpeakeasyBase {}
 
+/**
+ * Unable to update template '{stepId}' for test '{testId}'
+ */
 export class StandardError extends Error {
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
@@ -17,13 +19,13 @@ export class StandardError extends Error {
 
     @SpeakeasyMetadata()
     @Expose({ name: "error" })
-    @Type(() => Error400)
-    error?: Error400;
+    @Type(() => shared.Error400)
+    error?: shared.Error400;
 
     @SpeakeasyMetadata()
     @Expose({ name: "meta" })
-    @Type(() => Meta)
-    meta?: Meta;
+    @Type(() => shared.Meta)
+    meta?: shared.Meta;
 
     constructor(err?: StandardError) {
         super();

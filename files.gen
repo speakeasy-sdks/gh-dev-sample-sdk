@@ -68,11 +68,10 @@ src/sdk/models/shared/test.ts
 src/sdk/models/shared/testdetail.ts
 src/sdk/models/shared/schedule.ts
 src/sdk/models/shared/metrics.ts
+src/sdk/models/shared/error400.ts
 src/sdk/models/shared/teststep.ts
 src/sdk/models/shared/security.ts
 src/sdk/models/errors/standarderror.ts
-src/sdk/models/errors/meta.ts
-src/sdk/models/errors/error400.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
@@ -195,12 +194,11 @@ docs/sdk/models/shared/changesfromlastperiod.md
 docs/sdk/models/shared/responsetimes.md
 docs/sdk/models/shared/thistimeperiod.md
 docs/sdk/models/shared/metrics.md
+docs/sdk/models/shared/error400.md
 docs/sdk/models/shared/teststep.md
 docs/sdk/models/shared/security.md
 docs/sdk/models/errors/data.md
 docs/sdk/models/errors/standarderror.md
-docs/sdk/models/errors/meta.md
-docs/sdk/models/errors/error400.md
 docs/sdks/runscopeapi/README.md
 docs/sdks/account/README.md
 docs/sdks/buckets/README.md
