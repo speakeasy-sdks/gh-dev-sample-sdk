@@ -17,9 +17,9 @@ Return details of the test's environments (only those that belong to the specifi
 import { RunscopeAPI } from "Runscope-API";
 import { GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "";
+const operationSecurity: GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testEnvironments.getBucketsBucketKeyTestsTestIdEnvironments({
     bucketKey: "string",
@@ -29,7 +29,9 @@ const operationSecurity: GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity = ""
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -60,9 +62,9 @@ Create new test environment.
 import { RunscopeAPI } from "Runscope-API";
 import { PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "";
+const operationSecurity: PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testEnvironments.postBucketsBucketKeyTestsTestIdEnvironments({
     environment: {
@@ -90,7 +92,9 @@ const operationSecurity: PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -121,9 +125,9 @@ Update the details of a test environment.
 import { RunscopeAPI } from "Runscope-API";
 import { PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdSecurity = "";
+const operationSecurity: PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testEnvironments.putBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentId({
     environment: {
@@ -152,7 +156,9 @@ const operationSecurity: PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentId
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

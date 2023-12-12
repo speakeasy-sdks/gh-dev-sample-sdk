@@ -18,16 +18,18 @@ Information about the authorized account.
 import { RunscopeAPI } from "Runscope-API";
 import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetAccountSecurity = "";
+const operationSecurity: GetAccountSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.account.getAccount(operationSecurity);
 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -57,9 +59,9 @@ List currently connected agents associated with a given team.
 import { RunscopeAPI } from "Runscope-API";
 import { GetTeamsTeamIdAgentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetTeamsTeamIdAgentsSecurity = "";
+const operationSecurity: GetTeamsTeamIdAgentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.account.getTeamsTeamIdAgents({
     teamId: "string",
@@ -68,7 +70,9 @@ const operationSecurity: GetTeamsTeamIdAgentsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -99,9 +103,9 @@ Returns a list of integrations configured for the team.
 import { RunscopeAPI } from "Runscope-API";
 import { GetTeamsTeamIdIntegrationsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetTeamsTeamIdIntegrationsSecurity = "";
+const operationSecurity: GetTeamsTeamIdIntegrationsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.account.getTeamsTeamIdIntegrations({
     teamId: "string",
@@ -110,7 +114,9 @@ const operationSecurity: GetTeamsTeamIdIntegrationsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -141,9 +147,9 @@ List people and integrations associated with a given team.
 import { RunscopeAPI } from "Runscope-API";
 import { GetTeamsTeamIdPeopleSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetTeamsTeamIdPeopleSecurity = "";
+const operationSecurity: GetTeamsTeamIdPeopleSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.account.getTeamsTeamIdPeople({
     teamId: "string",
@@ -152,7 +158,9 @@ const operationSecurity: GetTeamsTeamIdPeopleSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

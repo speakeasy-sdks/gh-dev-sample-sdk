@@ -20,9 +20,9 @@ Delete a test, including all steps, schedules, test-specific environments and re
 import { RunscopeAPI } from "Runscope-API";
 import { DeleteBucketsBucketKeyTestsTestIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: DeleteBucketsBucketKeyTestsTestIdSecurity = "";
+const operationSecurity: DeleteBucketsBucketKeyTestsTestIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.deleteBucketsBucketKeyTestsTestId({
     bucketKey: "string",
@@ -32,7 +32,9 @@ const operationSecurity: DeleteBucketsBucketKeyTestsTestIdSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -63,9 +65,9 @@ Returns a list of tests.
 import { RunscopeAPI } from "Runscope-API";
 import { GetBucketsBucketKeyTestsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsBucketKeyTestsSecurity = "";
+const operationSecurity: GetBucketsBucketKeyTestsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.getBucketsBucketKeyTests({
     bucketKey: "string",
@@ -74,7 +76,9 @@ const operationSecurity: GetBucketsBucketKeyTestsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -105,9 +109,9 @@ Retrieve the details of a given test by ID.
 import { RunscopeAPI } from "Runscope-API";
 import { GetBucketsBucketKeyTestsTestIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsBucketKeyTestsTestIdSecurity = "";
+const operationSecurity: GetBucketsBucketKeyTestsTestIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.getBucketsBucketKeyTestsTestId({
     bucketKey: "string",
@@ -117,7 +121,9 @@ const operationSecurity: GetBucketsBucketKeyTestsTestIdSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -148,9 +154,9 @@ Return details of the test metrics for the specified timeframe.
 import { RunscopeAPI } from "Runscope-API";
 import { GetBucketsBucketKeyTestsTestIdMetricsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsBucketKeyTestsTestIdMetricsSecurity = "";
+const operationSecurity: GetBucketsBucketKeyTestsTestIdMetricsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.getBucketsBucketKeyTestsTestIdMetrics({
     bucketKey: "string",
@@ -160,7 +166,9 @@ const operationSecurity: GetBucketsBucketKeyTestsTestIdMetricsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -191,9 +199,9 @@ Create a test.
 import { RunscopeAPI } from "Runscope-API";
 import { PostBucketsBucketKeyTestsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsBucketKeyTestsSecurity = "";
+const operationSecurity: PostBucketsBucketKeyTestsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.postBucketsBucketKeyTests({
     test: {
@@ -207,7 +215,9 @@ const operationSecurity: PostBucketsBucketKeyTestsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -238,9 +248,9 @@ Modify a test's name, description, default environment and its steps. To modify 
 import { RunscopeAPI } from "Runscope-API";
 import { PutBucketsBucketKeyTestsTestIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PutBucketsBucketKeyTestsTestIdSecurity = "";
+const operationSecurity: PutBucketsBucketKeyTestsTestIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.putBucketsBucketKeyTestsTestId({
     bucketKey: "string",
@@ -250,7 +260,9 @@ const operationSecurity: PutBucketsBucketKeyTestsTestIdSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

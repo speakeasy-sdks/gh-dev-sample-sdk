@@ -17,9 +17,9 @@ Returns list of shared environments for a specified bucket.
 import { RunscopeAPI } from "Runscope-API";
 import { GetBucketsBucketKeyEnvironmentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsBucketKeyEnvironmentsSecurity = "";
+const operationSecurity: GetBucketsBucketKeyEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.sharedEnvironments.getBucketsBucketKeyEnvironments({
     bucketKey: "string",
@@ -28,7 +28,9 @@ const operationSecurity: GetBucketsBucketKeyEnvironmentsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -59,9 +61,9 @@ Create new shared environment.
 import { RunscopeAPI } from "Runscope-API";
 import { PostBucketsBucketKeyEnvironmentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "";
+const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.sharedEnvironments.postBucketsBucketKeyEnvironments({
     environment: {
@@ -88,7 +90,9 @@ const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -119,9 +123,9 @@ Update the details of a shared environment.
 import { RunscopeAPI } from "Runscope-API";
 import { PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = "";
+const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.sharedEnvironments.putBucketsBucketKeyEnvironmentsEnvironmentId({
     environment: {
@@ -149,7 +153,9 @@ const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

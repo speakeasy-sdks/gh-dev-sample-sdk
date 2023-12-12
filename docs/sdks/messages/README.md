@@ -19,9 +19,9 @@ Clear a bucket (remove all messages).
 import { RunscopeAPI } from "Runscope-API";
 import { DeleteBucketsBucketKeyMessagesSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: DeleteBucketsBucketKeyMessagesSecurity = "";
+const operationSecurity: DeleteBucketsBucketKeyMessagesSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.messages.deleteBucketsBucketKeyMessages({
     bucketKey: "string",
@@ -30,7 +30,9 @@ const operationSecurity: DeleteBucketsBucketKeyMessagesSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -60,9 +62,9 @@ Retrieve a list of error messages in a bucket
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI({
-    runscopeAuth: "",
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.messages.getBucketsBucketKeyErrors({
@@ -72,7 +74,9 @@ import { RunscopeAPI } from "Runscope-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -101,9 +105,9 @@ Retrieve a list of messages in a bucket
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI({
-    runscopeAuth: "",
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.messages.getBucketsBucketKeyMessages({
@@ -113,7 +117,9 @@ import { RunscopeAPI } from "Runscope-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -142,9 +148,9 @@ Retrieve the details for a single message.
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI({
-    runscopeAuth: "",
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.messages.getBucketsBucketKeyMessagesMessageId({
@@ -155,7 +161,9 @@ import { RunscopeAPI } from "Runscope-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -185,9 +193,9 @@ Create a message
 import { RunscopeAPI } from "Runscope-API";
 import { PostBucketsBucketKeyMessagesSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsBucketKeyMessagesSecurity = "";
+const operationSecurity: PostBucketsBucketKeyMessagesSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.messages.postBucketsBucketKeyMessages({
     newMessage: {
@@ -200,7 +208,9 @@ const operationSecurity: PostBucketsBucketKeyMessagesSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

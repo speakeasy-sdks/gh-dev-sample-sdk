@@ -75,7 +75,6 @@ src/sdk/models/errors/standarderror.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/getaccountsecurity.md
 docs/sdk/models/operations/getaccountresponsebody.md
 docs/sdk/models/operations/getaccountresponse.md
@@ -207,4 +206,5 @@ docs/sdks/messages/README.md
 docs/sdks/tests/README.md
 docs/sdks/testenvironments/README.md
 docs/sdks/teststeps/README.md
+USAGE.md
 .gitattributes

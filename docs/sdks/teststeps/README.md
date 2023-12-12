@@ -18,9 +18,9 @@ Delete a step from a test.
 import { RunscopeAPI } from "Runscope-API";
 import { DeleteBucketsBucketKeyTestsTestIdStepsStepIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: DeleteBucketsBucketKeyTestsTestIdStepsStepIdSecurity = "";
+const operationSecurity: DeleteBucketsBucketKeyTestsTestIdStepsStepIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testSteps.deleteBucketsBucketKeyTestsTestIdStepsStepId({
     bucketKey: "string",
@@ -31,7 +31,9 @@ const operationSecurity: DeleteBucketsBucketKeyTestsTestIdStepsStepIdSecurity = 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -62,9 +64,9 @@ List test steps for a test.
 import { RunscopeAPI } from "Runscope-API";
 import { GetBucketsBucketKeyTestsTestIdStepsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsBucketKeyTestsTestIdStepsSecurity = "";
+const operationSecurity: GetBucketsBucketKeyTestsTestIdStepsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testSteps.getBucketsBucketKeyTestsTestIdSteps({
     bucketKey: "string",
@@ -74,7 +76,9 @@ const operationSecurity: GetBucketsBucketKeyTestsTestIdStepsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -105,9 +109,9 @@ Add new test step.
 import { RunscopeAPI } from "Runscope-API";
 import { PostBucketsBucketKeyTestsTestIdStepsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsBucketKeyTestsTestIdStepsSecurity = "";
+const operationSecurity: PostBucketsBucketKeyTestsTestIdStepsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testSteps.postBucketsBucketKeyTestsTestIdSteps({
     testStep: {},
@@ -118,7 +122,9 @@ const operationSecurity: PostBucketsBucketKeyTestsTestIdStepsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -150,9 +156,9 @@ Update the details of a single test step.
 import { RunscopeAPI } from "Runscope-API";
 import { PutBucketsBucketKeyTestsTestIdStepsStepIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PutBucketsBucketKeyTestsTestIdStepsStepIdSecurity = "";
+const operationSecurity: PutBucketsBucketKeyTestsTestIdStepsStepIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testSteps.putBucketsBucketKeyTestsTestIdStepsStepId({
     testStep: {},
@@ -164,7 +170,9 @@ const operationSecurity: PutBucketsBucketKeyTestsTestIdStepsStepIdSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

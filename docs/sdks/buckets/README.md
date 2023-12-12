@@ -18,9 +18,9 @@ Delete a single bucket resource.
 import { RunscopeAPI } from "Runscope-API";
 import { DeleteBucketsBucketKeySecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: DeleteBucketsBucketKeySecurity = "";
+const operationSecurity: DeleteBucketsBucketKeySecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.buckets.deleteBucketsBucketKey({
     bucketKey: "string",
@@ -29,7 +29,9 @@ const operationSecurity: DeleteBucketsBucketKeySecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -60,10 +62,10 @@ Returns a list of buckets.
 import { RunscopeAPI } from "Runscope-API";
 import { GetBucketsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
 const operationSecurity: GetBucketsSecurity = {
-  runscopeAuth: "",
+  runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
 };
 
   const res = await sdk.buckets.getBuckets(operationSecurity);
@@ -71,7 +73,9 @@ const operationSecurity: GetBucketsSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -100,9 +104,9 @@ Returns a single bucket resource.
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI({
-    runscopeAuth: "",
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.buckets.getBucketsBucketKey({
@@ -112,7 +116,9 @@ import { RunscopeAPI } from "Runscope-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -142,9 +148,9 @@ Create a new bucket
 import { RunscopeAPI } from "Runscope-API";
 import { PostBucketsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsSecurity = "";
+const operationSecurity: PostBucketsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.buckets.postBuckets({
     name: "string",
@@ -154,7 +160,9 @@ const operationSecurity: PostBucketsSecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
