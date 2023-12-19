@@ -52,7 +52,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## getBucketsBucketKeyTestsTestIdSteps
 
@@ -97,7 +97,7 @@ run();
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## postBucketsBucketKeyTestsTestIdSteps
 
@@ -144,7 +144,7 @@ run();
 | Error Object         | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.StandardError | 400                  | application/json     |
-| errors.SDKError      | 400-600              | */*                  |
+| errors.SDKError      | 4xx-5xx              | */*                  |
 
 ## putBucketsBucketKeyTestsTestIdStepsStepId
 
@@ -192,4 +192,4 @@ run();
 | Error Object         | Status Code          | Content Type         |
 | -------------------- | -------------------- | -------------------- |
 | errors.StandardError | 400                  | application/json     |
-| errors.SDKError      | 400-600              | */*                  |
+| errors.SDKError      | 4xx-5xx              | */*                  |
