@@ -24,7 +24,7 @@ async function run() {
 const operationSecurity: DeleteBucketsBucketKeyMessagesSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.messages.deleteBucketsBucketKeyMessages({
-    bucketKey: "string",
+    bucketKey: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -68,7 +68,7 @@ async function run() {
   });
 
   const res = await sdk.messages.getBucketsBucketKeyErrors({
-    bucketKey: "string",
+    bucketKey: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -111,7 +111,7 @@ async function run() {
   });
 
   const res = await sdk.messages.getBucketsBucketKeyMessages({
-    bucketKey: "string",
+    bucketKey: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -154,8 +154,8 @@ async function run() {
   });
 
   const res = await sdk.messages.getBucketsBucketKeyMessagesMessageId({
-    bucketKey: "string",
-    messageId: "string",
+    bucketKey: "<value>",
+    messageId: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -202,7 +202,7 @@ const operationSecurity: PostBucketsBucketKeyMessagesSecurity = "Bearer <YOUR_AC
       request: {},
       response: {},
     },
-    bucketKey: "string",
+    bucketKey: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

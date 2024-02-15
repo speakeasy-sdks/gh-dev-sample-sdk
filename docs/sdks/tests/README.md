@@ -25,8 +25,8 @@ async function run() {
 const operationSecurity: DeleteBucketsBucketKeyTestsTestIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.deleteBucketsBucketKeyTestsTestId({
-    bucketKey: "string",
-    testId: "string",
+    bucketKey: "<value>",
+    testId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -70,7 +70,7 @@ async function run() {
 const operationSecurity: GetBucketsBucketKeyTestsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.getBucketsBucketKeyTests({
-    bucketKey: "string",
+    bucketKey: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -114,8 +114,8 @@ async function run() {
 const operationSecurity: GetBucketsBucketKeyTestsTestIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.getBucketsBucketKeyTestsTestId({
-    bucketKey: "string",
-    testId: "string",
+    bucketKey: "<value>",
+    testId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -159,8 +159,8 @@ async function run() {
 const operationSecurity: GetBucketsBucketKeyTestsTestIdMetricsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.getBucketsBucketKeyTestsTestIdMetrics({
-    bucketKey: "string",
-    testId: "string",
+    bucketKey: "<value>",
+    testId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -207,9 +207,9 @@ const operationSecurity: PostBucketsBucketKeyTestsSecurity = "Bearer <YOUR_ACCES
     test: {
       createdBy: {},
       lastRun: {},
-      name: "string",
+      name: "<value>",
     },
-    bucketKey: "string",
+    bucketKey: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -253,8 +253,8 @@ async function run() {
 const operationSecurity: PutBucketsBucketKeyTestsTestIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.tests.putBucketsBucketKeyTestsTestId({
-    bucketKey: "string",
-    testId: "string",
+    bucketKey: "<value>",
+    testId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

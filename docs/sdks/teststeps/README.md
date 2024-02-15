@@ -23,9 +23,9 @@ async function run() {
 const operationSecurity: DeleteBucketsBucketKeyTestsTestIdStepsStepIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testSteps.deleteBucketsBucketKeyTestsTestIdStepsStepId({
-    bucketKey: "string",
-    stepId: "string",
-    testId: "string",
+    bucketKey: "<value>",
+    stepId: "<value>",
+    testId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -69,8 +69,8 @@ async function run() {
 const operationSecurity: GetBucketsBucketKeyTestsTestIdStepsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.testSteps.getBucketsBucketKeyTestsTestIdSteps({
-    bucketKey: "string",
-    testId: "string",
+    bucketKey: "<value>",
+    testId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -115,8 +115,8 @@ const operationSecurity: PostBucketsBucketKeyTestsTestIdStepsSecurity = "Bearer 
 
   const res = await sdk.testSteps.postBucketsBucketKeyTestsTestIdSteps({
     testStep: {},
-    bucketKey: "string",
-    testId: "string",
+    bucketKey: "<value>",
+    testId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -162,9 +162,9 @@ const operationSecurity: PutBucketsBucketKeyTestsTestIdStepsStepIdSecurity = "Be
 
   const res = await sdk.testSteps.putBucketsBucketKeyTestsTestIdStepsStepId({
     testStep: {},
-    bucketKey: "string",
-    stepId: "string",
-    testId: "string",
+    bucketKey: "<value>",
+    stepId: "<value>",
+    testId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

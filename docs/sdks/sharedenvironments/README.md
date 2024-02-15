@@ -22,7 +22,7 @@ async function run() {
 const operationSecurity: GetBucketsBucketKeyEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.sharedEnvironments.getBucketsBucketKeyEnvironments({
-    bucketKey: "string",
+    bucketKey: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -73,18 +73,18 @@ const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "Bearer <YOU
       integrations: [
         {},
       ],
-      name: "string",
+      name: "<value>",
       regions: [
-        "string",
+        "<value>",
       ],
       remoteAgents: [
         {},
       ],
       scriptLibrary: [
-        "string",
+        "<value>",
       ],
     },
-    bucketKey: "string",
+    bucketKey: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -135,19 +135,19 @@ const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = 
       integrations: [
         {},
       ],
-      name: "string",
+      name: "<value>",
       regions: [
-        "string",
+        "<value>",
       ],
       remoteAgents: [
         {},
       ],
       scriptLibrary: [
-        "string",
+        "<value>",
       ],
     },
-    bucketKey: "string",
-    environmentId: "string",
+    bucketKey: "<value>",
+    environmentId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

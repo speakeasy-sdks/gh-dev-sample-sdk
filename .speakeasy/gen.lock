@@ -4,15 +4,15 @@ management:
   docChecksum: 9b5a54a2d12ba728ec2931e432066fca
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.4.1
-  configChecksum: 3d8d9d8d16a920bd9318ccb98fd4d356
+  generationVersion: 2.258.0
+  releaseVersion: 0.4.2
+  configChecksum: 5a0cb82bf5498560c5e094e0f46cbb7c
   repoURL: https://github.com/speakeasy-sdks/gh-dev-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/gh-dev-sample-sdk
 features:
   typescript:
-    core: 3.4.1
+    core: 3.4.7
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.0

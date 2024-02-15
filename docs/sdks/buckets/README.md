@@ -23,7 +23,7 @@ async function run() {
 const operationSecurity: DeleteBucketsBucketKeySecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.buckets.deleteBucketsBucketKey({
-    bucketKey: "string",
+    bucketKey: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -110,7 +110,7 @@ async function run() {
   });
 
   const res = await sdk.buckets.getBucketsBucketKey({
-    bucketKey: "string",
+    bucketKey: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -153,8 +153,8 @@ async function run() {
 const operationSecurity: PostBucketsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.buckets.postBuckets({
-    name: "string",
-    teamId: "string",
+    name: "<value>",
+    teamId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

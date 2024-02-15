@@ -64,7 +64,7 @@ async function run() {
 const operationSecurity: GetTeamsTeamIdAgentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.account.getTeamsTeamIdAgents({
-    teamId: "string",
+    teamId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -108,7 +108,7 @@ async function run() {
 const operationSecurity: GetTeamsTeamIdIntegrationsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.account.getTeamsTeamIdIntegrations({
-    teamId: "string",
+    teamId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {
@@ -152,7 +152,7 @@ async function run() {
 const operationSecurity: GetTeamsTeamIdPeopleSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
   const res = await sdk.account.getTeamsTeamIdPeople({
-    teamId: "string",
+    teamId: "<value>",
   }, operationSecurity);
 
   if (res.statusCode == 200) {

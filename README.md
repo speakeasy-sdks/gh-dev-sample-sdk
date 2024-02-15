@@ -137,8 +137,8 @@ async function run() {
         res = await sdk.testSteps.postBucketsBucketKeyTestsTestIdSteps(
             {
                 testStep: {},
-                bucketKey: "string",
-                testId: "string",
+                bucketKey: "<value>",
+                testId: "<value>",
             },
             operationSecurity
         );
@@ -268,7 +268,7 @@ async function run() {
     });
 
     const res = await sdk.buckets.getBucketsBucketKey({
-        bucketKey: "string",
+        bucketKey: "<value>",
     });
 
     if (res.statusCode == 200) {
