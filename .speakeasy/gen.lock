@@ -3,18 +3,18 @@ id: f53f5d6c-7984-4597-b722-4636a823353d
 management:
   docChecksum: 9b5a54a2d12ba728ec2931e432066fca
   docVersion: 1.0.0
-  speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.4.2
-  configChecksum: 5a0cb82bf5498560c5e094e0f46cbb7c
+  speakeasyVersion: 1.207.1
+  generationVersion: 2.280.6
+  releaseVersion: 0.4.3
+  configChecksum: 91a4af8e9e95eb3207bb114f4a7b9801
   repoURL: https://github.com/speakeasy-sdks/gh-dev-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/gh-dev-sample-sdk
 features:
   typescript:
-    core: 3.4.7
-    globalSecurity: 2.82.2
-    globalServerURLs: 2.82.1
+    core: 3.4.8
+    globalSecurity: 2.82.4
+    globalServerURLs: 2.82.2
     methodSecurity: 2.82.0
 generatedFiles:
   - src/sdk/account.ts

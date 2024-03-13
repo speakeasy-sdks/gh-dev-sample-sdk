@@ -52,9 +52,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.4.2";
-    genVersion = "2.258.0";
-    userAgent = "speakeasy-sdk/typescript 0.4.2 2.258.0 1.0.0 Runscope-API";
+    sdkVersion = "0.4.3";
+    genVersion = "2.280.6";
+    userAgent = "speakeasy-sdk/typescript 0.4.3 2.280.6 1.0.0 Runscope-API";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -77,9 +77,12 @@ export class RunscopeAPI {
 
     constructor(props?: SDKProps) {
         let serverURL = props?.serverURL;
-        const serverIdx = props?.serverIdx ?? 0;
 
         if (!serverURL) {
+            const serverIdx = props?.serverIdx ?? 0;
+            if (serverIdx < 0 || serverIdx >= ServerList.length) {
+                throw new Error(`Invalid server index ${serverIdx}`);
+            }
             serverURL = ServerList[serverIdx];
         }
 
