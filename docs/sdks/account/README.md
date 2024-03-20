@@ -16,13 +16,13 @@ Information about the authorized account.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: GetAccountSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
-  const res = await sdk.account.getAccount(operationSecurity);
+  const res = await sdk.account.getAccount();
 
   if (res.statusCode == 200) {
     // handle response
@@ -34,10 +34,9 @@ run();
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `security`                                                                         | [operations.GetAccountSecurity](../../sdk/models/operations/getaccountsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -57,15 +56,15 @@ List currently connected agents associated with a given team.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetTeamsTeamIdAgentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: GetTeamsTeamIdAgentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.account.getTeamsTeamIdAgents({
     teamId: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -77,11 +76,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetTeamsTeamIdAgentsRequest](../../sdk/models/operations/getteamsteamidagentsrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.GetTeamsTeamIdAgentsSecurity](../../sdk/models/operations/getteamsteamidagentssecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetTeamsTeamIdAgentsRequest](../../sdk/models/operations/getteamsteamidagentsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
@@ -101,15 +99,15 @@ Returns a list of integrations configured for the team.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetTeamsTeamIdIntegrationsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: GetTeamsTeamIdIntegrationsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.account.getTeamsTeamIdIntegrations({
     teamId: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -121,11 +119,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.GetTeamsTeamIdIntegrationsRequest](../../sdk/models/operations/getteamsteamidintegrationsrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.GetTeamsTeamIdIntegrationsSecurity](../../sdk/models/operations/getteamsteamidintegrationssecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.GetTeamsTeamIdIntegrationsRequest](../../sdk/models/operations/getteamsteamidintegrationsrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
@@ -145,15 +142,15 @@ List people and integrations associated with a given team.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetTeamsTeamIdPeopleSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: GetTeamsTeamIdPeopleSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.account.getTeamsTeamIdPeople({
     teamId: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -165,11 +162,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetTeamsTeamIdPeopleRequest](../../sdk/models/operations/getteamsteamidpeoplerequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.GetTeamsTeamIdPeopleSecurity](../../sdk/models/operations/getteamsteamidpeoplesecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetTeamsTeamIdPeopleRequest](../../sdk/models/operations/getteamsteamidpeoplerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response

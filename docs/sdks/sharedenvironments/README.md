@@ -15,15 +15,15 @@ Returns list of shared environments for a specified bucket.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetBucketsBucketKeyEnvironmentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsBucketKeyEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.sharedEnvironments.getBucketsBucketKeyEnvironments({
     bucketKey: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -35,11 +35,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.GetBucketsBucketKeyEnvironmentsRequest](../../sdk/models/operations/getbucketsbucketkeyenvironmentsrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.GetBucketsBucketKeyEnvironmentsSecurity](../../sdk/models/operations/getbucketsbucketkeyenvironmentssecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.GetBucketsBucketKeyEnvironmentsRequest](../../sdk/models/operations/getbucketsbucketkeyenvironmentsrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -59,11 +58,11 @@ Create new shared environment.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { PostBucketsBucketKeyEnvironmentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.sharedEnvironments.postBucketsBucketKeyEnvironments({
     environment: {
@@ -85,7 +84,7 @@ const operationSecurity: PostBucketsBucketKeyEnvironmentsSecurity = "Bearer <YOU
       ],
     },
     bucketKey: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -97,11 +96,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.PostBucketsBucketKeyEnvironmentsRequest](../../sdk/models/operations/postbucketsbucketkeyenvironmentsrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.PostBucketsBucketKeyEnvironmentsSecurity](../../sdk/models/operations/postbucketsbucketkeyenvironmentssecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.PostBucketsBucketKeyEnvironmentsRequest](../../sdk/models/operations/postbucketsbucketkeyenvironmentsrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
@@ -121,11 +119,11 @@ Update the details of a shared environment.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.sharedEnvironments.putBucketsBucketKeyEnvironmentsEnvironmentId({
     environment: {
@@ -148,7 +146,7 @@ const operationSecurity: PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity = 
     },
     bucketKey: "<value>",
     environmentId: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -160,11 +158,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdRequest](../../sdk/models/operations/putbucketsbucketkeyenvironmentsenvironmentidrequest.md)   | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `security`                                                                                                                                             | [operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdSecurity](../../sdk/models/operations/putbucketsbucketkeyenvironmentsenvironmentidsecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.PutBucketsBucketKeyEnvironmentsEnvironmentIdRequest](../../sdk/models/operations/putbucketsbucketkeyenvironmentsenvironmentidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response

@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "../sdk/models/errors";
 import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -20,7 +21,6 @@ export class TestEnvironments {
      */
     async getBucketsBucketKeyTestsTestIdEnvironments(
         req: operations.GetBucketsBucketKeyTestsTestIdEnvironmentsRequest,
-        security: operations.GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.GetBucketsBucketKeyTestsTestIdEnvironmentsResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -37,10 +37,14 @@ export class TestEnvironments {
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
@@ -102,7 +106,6 @@ export class TestEnvironments {
      */
     async postBucketsBucketKeyTestsTestIdEnvironments(
         req: operations.PostBucketsBucketKeyTestsTestIdEnvironmentsRequest,
-        security: operations.PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PostBucketsBucketKeyTestsTestIdEnvironmentsResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -129,10 +132,14 @@ export class TestEnvironments {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,
@@ -186,7 +193,6 @@ export class TestEnvironments {
      */
     async putBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentId(
         req: operations.PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdRequest,
-        security: operations.PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -215,13 +221,14 @@ export class TestEnvironments {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security =
-                new operations.PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdSecurity(
-                    security
-                );
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,

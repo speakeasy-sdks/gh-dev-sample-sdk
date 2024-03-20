@@ -21,7 +21,6 @@ export class Buckets {
      */
     async deleteBucketsBucketKey(
         req: operations.DeleteBucketsBucketKeyRequest,
-        security: operations.DeleteBucketsBucketKeySecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.DeleteBucketsBucketKeyResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -34,10 +33,14 @@ export class Buckets {
         );
         const operationUrl: string = utils.generateURL(baseURL, "/buckets/{bucketKey}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.DeleteBucketsBucketKeySecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
@@ -96,20 +99,21 @@ export class Buckets {
     /**
      * Returns a list of buckets.
      */
-    async getBuckets(
-        security: operations.GetBucketsSecurity,
-        config?: AxiosRequestConfig
-    ): Promise<operations.GetBucketsResponse> {
+    async getBuckets(config?: AxiosRequestConfig): Promise<operations.GetBucketsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
         const operationUrl: string = baseURL.replace(/\/$/, "") + "/buckets";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.GetBucketsSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
@@ -272,7 +276,6 @@ export class Buckets {
      */
     async postBuckets(
         req: shared.NewBucket,
-        security: operations.PostBucketsSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PostBucketsResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -295,10 +298,14 @@ export class Buckets {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PostBucketsSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...reqBodyHeaders,
             ...config?.headers,

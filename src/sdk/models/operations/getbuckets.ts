@@ -7,14 +7,6 @@ import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
-export class GetBucketsSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
-    runscopeAuth?: string;
-
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
-    runscopeAuth1?: string;
-}
-
 /**
  * List of buckets associated with this authenticated account.
  */

@@ -22,20 +22,21 @@ export class Account {
      * @remarks
      * Information about the authorized account.
      */
-    async getAccount(
-        security: operations.GetAccountSecurity,
-        config?: AxiosRequestConfig
-    ): Promise<operations.GetAccountResponse> {
+    async getAccount(config?: AxiosRequestConfig): Promise<operations.GetAccountResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
         const operationUrl: string = baseURL.replace(/\/$/, "") + "/account";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.GetAccountSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
@@ -111,7 +112,6 @@ export class Account {
      */
     async getTeamsTeamIdAgents(
         req: operations.GetTeamsTeamIdAgentsRequest,
-        security: operations.GetTeamsTeamIdAgentsSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTeamsTeamIdAgentsResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -124,10 +124,14 @@ export class Account {
         );
         const operationUrl: string = utils.generateURL(baseURL, "/teams/{teamId}/agents", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.GetTeamsTeamIdAgentsSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
@@ -207,7 +211,6 @@ export class Account {
      */
     async getTeamsTeamIdIntegrations(
         req: operations.GetTeamsTeamIdIntegrationsRequest,
-        security: operations.GetTeamsTeamIdIntegrationsSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTeamsTeamIdIntegrationsResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -224,10 +227,14 @@ export class Account {
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.GetTeamsTeamIdIntegrationsSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
@@ -304,7 +311,6 @@ export class Account {
      */
     async getTeamsTeamIdPeople(
         req: operations.GetTeamsTeamIdPeopleRequest,
-        security: operations.GetTeamsTeamIdPeopleSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.GetTeamsTeamIdPeopleResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -317,10 +323,14 @@ export class Account {
         );
         const operationUrl: string = utils.generateURL(baseURL, "/teams/{teamId}/people", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.GetTeamsTeamIdPeopleSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 

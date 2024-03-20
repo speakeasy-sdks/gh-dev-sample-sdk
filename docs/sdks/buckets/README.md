@@ -16,15 +16,15 @@ Delete a single bucket resource.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { DeleteBucketsBucketKeySecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: DeleteBucketsBucketKeySecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.buckets.deleteBucketsBucketKey({
     bucketKey: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -36,11 +36,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.DeleteBucketsBucketKeyRequest](../../sdk/models/operations/deletebucketsbucketkeyrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [operations.DeleteBucketsBucketKeySecurity](../../sdk/models/operations/deletebucketsbucketkeysecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.DeleteBucketsBucketKeyRequest](../../sdk/models/operations/deletebucketsbucketkeyrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
@@ -60,15 +59,13 @@ Returns a list of buckets.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetBucketsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsSecurity = {
-  runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
-};
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
-  const res = await sdk.buckets.getBuckets(operationSecurity);
+  const res = await sdk.buckets.getBuckets();
 
   if (res.statusCode == 200) {
     // handle response
@@ -80,10 +77,9 @@ run();
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `security`                                                                         | [operations.GetBucketsSecurity](../../sdk/models/operations/getbucketssecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -146,16 +142,16 @@ Create a new bucket
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { PostBucketsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.buckets.postBuckets({
     name: "<value>",
     teamId: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -167,11 +163,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [shared.NewBucket](../../sdk/models/shared/newbucket.md)                             | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.PostBucketsSecurity](../../sdk/models/operations/postbucketssecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `request`                                                    | [shared.NewBucket](../../sdk/models/shared/newbucket.md)     | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response

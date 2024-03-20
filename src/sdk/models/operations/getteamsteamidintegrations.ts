@@ -7,11 +7,6 @@ import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
-export class GetTeamsTeamIdIntegrationsSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
-    runscopeAuth: string;
-}
-
 export class GetTeamsTeamIdIntegrationsRequest extends SpeakeasyBase {
     /**
      * Unique identifier for team

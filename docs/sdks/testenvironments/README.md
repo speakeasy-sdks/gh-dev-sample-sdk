@@ -15,16 +15,16 @@ Return details of the test's environments (only those that belong to the specifi
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.testEnvironments.getBucketsBucketKeyTestsTestIdEnvironments({
     bucketKey: "<value>",
     testId: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -36,11 +36,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.GetBucketsBucketKeyTestsTestIdEnvironmentsRequest](../../sdk/models/operations/getbucketsbucketkeyteststestidenvironmentsrequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `security`                                                                                                                                         | [operations.GetBucketsBucketKeyTestsTestIdEnvironmentsSecurity](../../sdk/models/operations/getbucketsbucketkeyteststestidenvironmentssecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.GetBucketsBucketKeyTestsTestIdEnvironmentsRequest](../../sdk/models/operations/getbucketsbucketkeyteststestidenvironmentsrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
@@ -60,11 +59,11 @@ Create new test environment.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.testEnvironments.postBucketsBucketKeyTestsTestIdEnvironments({
     environment: {
@@ -87,7 +86,7 @@ const operationSecurity: PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity = "
     },
     bucketKey: "<value>",
     testId: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -99,11 +98,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [operations.PostBucketsBucketKeyTestsTestIdEnvironmentsRequest](../../sdk/models/operations/postbucketsbucketkeyteststestidenvironmentsrequest.md)   | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `security`                                                                                                                                           | [operations.PostBucketsBucketKeyTestsTestIdEnvironmentsSecurity](../../sdk/models/operations/postbucketsbucketkeyteststestidenvironmentssecurity.md) | :heavy_check_mark:                                                                                                                                   | The security requirements to use for the request.                                                                                                    |
-| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.PostBucketsBucketKeyTestsTestIdEnvironmentsRequest](../../sdk/models/operations/postbucketsbucketkeyteststestidenvironmentsrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
@@ -123,11 +121,11 @@ Update the details of a test environment.
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RunscopeAPI();
-const operationSecurity: PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+  const sdk = new RunscopeAPI({
+    runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+  });
 
   const res = await sdk.testEnvironments.putBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentId({
     environment: {
@@ -151,7 +149,7 @@ const operationSecurity: PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentId
     bucketKey: "<value>",
     environmentId: "<value>",
     testId: "<value>",
-  }, operationSecurity);
+  });
 
   if (res.statusCode == 200) {
     // handle response
@@ -163,11 +161,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                                                                                                                    | Type                                                                                                                                                                         | Required                                                                                                                                                                     | Description                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                    | [operations.PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdRequest](../../sdk/models/operations/putbucketsbucketkeyteststestidenvironmentsenvironmentidrequest.md)   | :heavy_check_mark:                                                                                                                                                           | The request object to use for the request.                                                                                                                                   |
-| `security`                                                                                                                                                                   | [operations.PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdSecurity](../../sdk/models/operations/putbucketsbucketkeyteststestidenvironmentsenvironmentidsecurity.md) | :heavy_check_mark:                                                                                                                                                           | The security requirements to use for the request.                                                                                                                            |
-| `config`                                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                           | Available config options for making requests.                                                                                                                                |
+| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                  | [operations.PutBucketsBucketKeyTestsTestIdEnvironmentsEnvironmentIdRequest](../../sdk/models/operations/putbucketsbucketkeyteststestidenvironmentsenvironmentidrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| `config`                                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                               | :heavy_minus_sign:                                                                                                                                                         | Available config options for making requests.                                                                                                                              |
 
 
 ### Response

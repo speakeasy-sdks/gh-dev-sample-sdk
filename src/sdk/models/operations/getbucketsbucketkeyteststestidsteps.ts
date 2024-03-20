@@ -5,11 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
-export class GetBucketsBucketKeyTestsTestIdStepsSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
-    runscopeAuth: string;
-}
-
 export class GetBucketsBucketKeyTestsTestIdStepsRequest extends SpeakeasyBase {
     /**
      * Unique identifier for a bucket

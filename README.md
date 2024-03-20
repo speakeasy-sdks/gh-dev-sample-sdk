@@ -37,13 +37,13 @@ yarn add https://github.com/speakeasy-sdks/gh-dev-sample-sdk
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-    const sdk = new RunscopeAPI();
-    const operationSecurity: GetAccountSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+    const sdk = new RunscopeAPI({
+        runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    });
 
-    const res = await sdk.account.getAccount(operationSecurity);
+    const res = await sdk.account.getAccount();
 
     if (res.statusCode == 200) {
         // handle response
@@ -125,23 +125,19 @@ Example
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { PostBucketsBucketKeyTestsTestIdStepsSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
-    const sdk = new RunscopeAPI();
-    const operationSecurity: PostBucketsBucketKeyTestsTestIdStepsSecurity =
-        "Bearer <YOUR_ACCESS_TOKEN_HERE>";
+    const sdk = new RunscopeAPI({
+        runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+    });
 
     let res;
     try {
-        res = await sdk.testSteps.postBucketsBucketKeyTestsTestIdSteps(
-            {
-                testStep: {},
-                bucketKey: "<value>",
-                testId: "<value>",
-            },
-            operationSecurity
-        );
+        res = await sdk.testSteps.postBucketsBucketKeyTestsTestIdSteps({
+            testStep: {},
+            bucketKey: "<value>",
+            testId: "<value>",
+        });
     } catch (err) {
         if (err instanceof errors.StandardError) {
             console.error(err); // handle exception
@@ -179,15 +175,14 @@ You can override the default server globally by passing a server index to the `s
 
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
     const sdk = new RunscopeAPI({
         serverIdx: 0,
+        runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     });
-    const operationSecurity: GetAccountSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
-    const res = await sdk.account.getAccount(operationSecurity);
+    const res = await sdk.account.getAccount();
 
     if (res.statusCode == 200) {
         // handle response
@@ -204,15 +199,14 @@ run();
 The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { RunscopeAPI } from "Runscope-API";
-import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
 
 async function run() {
     const sdk = new RunscopeAPI({
         serverURL: "https://api.runscope.com/",
+        runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     });
-    const operationSecurity: GetAccountSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
 
-    const res = await sdk.account.getAccount(operationSecurity);
+    const res = await sdk.account.getAccount();
 
     if (res.statusCode == 200) {
         // handle response
@@ -267,31 +261,7 @@ async function run() {
         runscopeAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     });
 
-    const res = await sdk.buckets.getBucketsBucketKey({
-        bucketKey: "<value>",
-    });
-
-    if (res.statusCode == 200) {
-        // handle response
-    }
-}
-
-run();
-
-```
-
-### Per-Operation Security Schemes
-
-Some operations in this SDK require the security scheme to be specified at the request level. For example:
-```typescript
-import { RunscopeAPI } from "Runscope-API";
-import { GetAccountSecurity } from "Runscope-API/dist/sdk/models/operations";
-
-async function run() {
-    const sdk = new RunscopeAPI();
-    const operationSecurity: GetAccountSecurity = "Bearer <YOUR_ACCESS_TOKEN_HERE>";
-
-    const res = await sdk.account.getAccount(operationSecurity);
+    const res = await sdk.account.getAccount();
 
     if (res.statusCode == 200) {
         // handle response
